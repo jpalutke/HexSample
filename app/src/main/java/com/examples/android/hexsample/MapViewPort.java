@@ -78,6 +78,13 @@ class MapViewPort extends android.support.v7.widget.AppCompatImageView {
                 // Therefore:
                    dX = Math.abs(Math.cos(60*Math.PI/180)*mRadius);
                    dY = Math.abs(Math.sin(60*Math.PI/180)*mRadius);
+
+
+
+                   //lets convert this to add images instead of drawing?
+
+
+
                 //
                 // calc the vertices beginning with the right most vertex
                 // and working clockwise
