@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/map_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif"
+        android:text="The world as you know it:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.examples.android.hexsample.MapViewPort
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/interaction_bar"
+        android:layout_below="@id/map_header"
+        android:layout_margin="8dp"
+        android:background="@color/colorMapBackground"
+        />
+
+    <LinearLayout
+        android:id="@+id/interaction_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/image_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorImageBar"
+            android:lines="3"
+            android:text="image bar\nimage bar\nimage bar" />
+
+        <ScrollView
+            android:id="@+id/chat_body_scroller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorChatBody">
+
+            <TextView
+                android:id="@+id/chat_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="5" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/chat_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorChatEntry"
+            android:text="Chat Entry Line???:" />
+    </LinearLayout>
+</RelativeLayout>
